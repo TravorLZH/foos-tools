@@ -1,7 +1,6 @@
 /* Create a ramdisk for FOOS
  * Program Usage: tools/mkdisk ramdisk.img disk/
  */
-#define	_BSD_SOURCE
 #define	FOOS_TOOLS
 #include "../include/dev/ramdisk.h"
 #include <stdio.h>
