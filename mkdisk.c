@@ -7,7 +7,9 @@
 #include <string.h>
 #include <dirent.h>
 #include <stdlib.h>
+#ifndef	__FreeBSD__
 #include <malloc.h>
+#endif
 #include <errno.h>
 #include <unistd.h>
 
