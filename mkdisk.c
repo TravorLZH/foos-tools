@@ -2,7 +2,7 @@
  * Program Usage: tools/mkdisk ramdisk.img disk/
  */
 #define	FOOS_TOOLS
-#include "../include/dev/ramdisk.h"
+#include "../include/foos/ramfs.h"
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
