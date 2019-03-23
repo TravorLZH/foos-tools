@@ -34,7 +34,7 @@ void handle_directory(const char *dirname)
 		fclose(out);
 		exit(-1);
 	}
-	while(entry=readdir(indir)){
+	while((entry=readdir(indir))!=NULL){
 		if(entry->d_type!=DT_REG){
 			continue;
 		}
@@ -44,7 +44,7 @@ void handle_directory(const char *dirname)
 			exit(-1);
 		}
 		ptr->magic=RD_FILESIG;
-		strncpy(ptr->name,entry->d_name,64);
+		strncpy(ptr->name,entry->d_name,32);
 		fseek(tmp,0,SEEK_END);
 		ptr->size=ftell(tmp);
 		rewind(tmp);

@@ -4,10 +4,10 @@ CC=gcc
 all:	mkdisk tartest
 
 mkdisk:	mkdisk.c ../include/dev/ramdisk.h
-	$(CC) -g -o $@ $<
+	$(CC) -o $@ $<
 
 tartest:	tartest.c
-	$(CC) -g -o $@ $<
+	$(CC) -o $@ $<
 
 clean:
 	rm -f mkdisk tartest

@@ -71,7 +71,7 @@ int main(void)
 		printf("%s\t%s@%s\n",headers[i]->filename,headers[i]->owner,
 				headers[i]->group);
 		if(headers[i]->type=='0' || headers[i]->type=='\0')
-			printf("%s",headers[i]+1);
+			printf("%s",(char*)(headers[i]+1));
 	}
 	free(buf);
 	fclose(disk);
